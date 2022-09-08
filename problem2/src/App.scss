@@ -1,0 +1,159 @@
+@font-face {
+  font-family: Kanit;
+  src: url("./assets/fonts/Kanit-Regular.ttf");
+}
+
+.overall-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-family: Kanit;
+  background-color: rgba(8, 6, 11, 0.6);
+
+  .wallet-balance {
+    background-color: rgb(30, 29, 32);
+    border-radius: 12px;
+    padding: 5px 15px;
+    margin-top: 10px;
+    color: white;
+  }
+
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    width: 60%;
+    max-width: 600px;
+    background: rgba(0, 0, 0, 0)
+      linear-gradient(rgb(118, 69, 217) 0%, rgb(81, 33, 177) 100%) repeat scroll
+      0% 0%;
+    border-radius: 8px;
+
+    .input-container {
+      display: flex;
+      flex-direction: column;
+      margin: 10px;
+      max-width: 250px;
+
+      .input-content {
+        display: flex;
+        align-items: center;
+        background-color: white;
+        justify-content: space-between;
+        margin-top: 3px;
+        border-radius: 3px;
+
+        .input-text {
+          font-family: Kanit;
+          border-radius: 1px;
+          outline: none;
+          border: none;
+          width: 100%;
+          padding: 5px;
+          margin-left: 2px;
+        }
+
+        .input-icon {
+          width: 16px;
+          height: 16px;
+          min-height: 16px;
+          min-width: 16px;
+          cursor: pointer;
+          padding: 2px 4px;
+        }
+
+        .input-currency {
+          font-size: 13px;
+          margin: 0 5px 0 2px;
+        }
+
+        .max {
+          height: 26px;
+          padding: 0 7px;
+          font-size: 13px;
+          border-radius: 10px;
+          margin-right: 2px;
+          color: white;
+        }
+      }
+
+      .input-otp-container {
+        display: flex;
+        align-items: center;
+        margin-top: 3px;
+
+        .otp {
+          color: white;
+        }
+      }
+
+      .input-error {
+        margin: 5px 0 0 0;
+        font-size: 14px;
+        color: rgb(237, 75, 158);
+      }
+    }
+
+    .button {
+      border-radius: 10px;
+      outline: none;
+      border: none;
+      white-space: nowrap;
+      font-family: Kanit;
+      font-size: 14px;
+      padding: 0 10px;
+      height: 35px;
+      cursor: pointer;
+      background-color: rgb(31, 199, 212);
+
+      &:hover {
+        background-color: rgb(23, 156, 166);
+      }
+    }
+
+    .tooltip {
+      background-color: red;
+      width: 16px;
+      height: 16px;
+      border-radius: 10px;
+    }
+  }
+
+  .submit {
+    margin: 5px 10px 10px 10px;
+    color: black;
+  }
+
+  @media screen and (max-width: 640px) {
+    .form-container {
+      .input-container {
+        .input-otp-container {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .otp {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .form-container {
+      width: 100%;
+      border-radius: 0;
+      .input-container {
+        .input-otp-container {
+          flex-direction: column;
+          align-items: flex-start;
+
+          .otp {
+            margin-top: 10px;
+          }
+        }
+      }
+    }
+  }
+}
